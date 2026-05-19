@@ -4,6 +4,14 @@ __pycache__/
 *.pyd
 *.egg-info/
 
+
+**/__pycache__/
+
+# ignore docs folder
+docs/
+ 
+
+
 .ipynb_checkpoints/
 .cache/
 .pytest_cache/
