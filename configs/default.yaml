@@ -1,0 +1,45 @@
+seed: 42
+random_seeds: [13, 21, 34, 42, 55]
+
+paths:
+  data_dir: data
+  raw_dir: data/raw
+  processed_dir: data/processed
+  results_dir: results
+  models_dir: results/models
+  figures_dir: results/figures
+
+datasets:
+  ciciot:
+    merged_csv: data/raw/CIC_IOT_Dataset2023/CICIoT2023.csv
+    raw_csv_dir: data/raw/CIC_IOT_Dataset2023/CSV/MERGED_CSV
+    zip_path: data/raw/CIC_IOT_Dataset2023/CSV/MERGED_CSV.zip
+    extract_dir: data/raw/CIC_IOT_Dataset2023/CSV/MERGED_CSV
+    sample_rows: 1000000
+  edgeiiot:
+    csv_path: data/raw/Edge-IIoTset/DNN-EdgeIIoT-dataset.csv
+    sample_rows: 1000000
+    drop_duplicates: true
+    use_author_style_drops: true
+
+training:
+  fast_mode: false
+  test_size: 0.15
+  validation_size: 0.15
+  skip_if_result_exists: true
+  e2_max_train_rows: 250000
+  tinymlp_epochs: 25
+  tinymlp_fast_epochs: 12
+  tinymlp_batch_size: 8192
+
+models:
+  run_lr: true
+  run_rf: true
+  run_lgbm: true
+  run_tinymlp: true
+  rf_n_estimators: 250
+  rf_fast_n_estimators: 120
+  rf_max_depth: 22
+  rf_fast_max_depth: 16
+  lgbm_n_estimators: 300
+  lgbm_fast_n_estimators: 160

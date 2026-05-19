@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+scikit-learn
+lightgbm
+matplotlib
+seaborn
+torch
+psutil
+tqdm
+joblib
+pyarrow
+openpyxl
+pyyaml
+ipython
